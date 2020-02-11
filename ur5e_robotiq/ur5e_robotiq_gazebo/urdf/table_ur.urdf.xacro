@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="table">
+
+<xacro:property name="table_height" value="0.75"/>
+<xacro:property name="table_width" value="0.8"/>
+<xacro:property name="table_length" value="1.5"/>
+
+    <xacro:macro name="table" params="prefix parent *origin">
+        <joint name="${prefix}platform_origin_joint" type="fixed" >
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${prefix}platform" />
+        </joint>
+
+        <link name="${prefix}platform">
+            <inertial>
+                <origin xyz="${table_width/2} ${table_length/2} ${table_height/2}" rpy="0 0 0"/>
+                <mass value="5.0"/>
+                <inertia ixx="0.442358" ixy="0" ixz="0" iyy="0.166085" iyz="0" izz="0.425124" />
+            </inertial>
+            <visual>
+                <origin xyz="${table_width/2} ${table_length/2} ${table_height/2}" rpy="0 0 0" />
+                <geometry>
+                    <!--mesh filename="package://tutorial_commons/meshes/table.stl"/-->
+					<box size="${table_width} ${table_length} ${table_height}" />
+                </geometry>
+                <material name="greyish">
+                    <color rgba="0.8 0.8 0.8 1"/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="${table_width/2} ${table_length/2} ${table_height/2}" rpy="0 0 0" />
+                <geometry>
+                    <!--mesh filename="package://tutorial_commons/meshes/table.stl"/-->
+					<box size="${table_width} ${table_length} ${table_height}" />
+                </geometry>
+            </collision>
+        </link>
+
+        <!--joint name="${prefix}platform_base_joint" type="fixed" >
+            <origin xyz="0 0 {table_height}" rpy="0 0 0" />
+            <parent link="${prefix}platform" />
+            <child link="${prefix}platform_base" />
+        </joint>
+
+          <link name="${prefix}platform_base"/>
+
+        <joint name="${prefix}platform_flange_joint" type="fixed" >
+            <origin xyz="0.23 0.89 0" rpy="0 0 0" />
+            <parent link="${prefix}platform_base" />
+            <child link="${prefix}platform_flange" />
+        </joint>
+
+        <link name="${prefix}platform_flange"/-->
+
+    </xacro:macro>
+
+</robot>

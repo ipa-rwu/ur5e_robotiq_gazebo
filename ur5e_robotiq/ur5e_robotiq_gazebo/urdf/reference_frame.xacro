@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- This file contains the macro for a reference frame -->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="reference_frame" >
+
+    <xacro:macro name="reference_frame" params="parent name prefix *origin">
+
+        <joint name="${prefix}${name}_joint" type="fixed" >
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${prefix}${name}" />
+        </joint>
+
+        <link name="${prefix}${name}"/>
+
+    </xacro:macro>
+
+</robot>

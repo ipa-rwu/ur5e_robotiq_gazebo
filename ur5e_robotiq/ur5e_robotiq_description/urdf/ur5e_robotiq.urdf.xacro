@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="ur5e_robotiq" >
+
+	<xacro:arg name="sim" default="true"/>
+  <xacro:property name="sim" value="$(arg sim)"/>
+  
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_e_description)/urdf/common.gazebo.xacro" />
+
+  <!-- ur5e -->
+  <xacro:property name="damping_value" value="10" />
+  <xacro:property name="friction_value" value="0.1" />
+  <xacro:include filename="$(find ur_e_description)/urdf/ur5e.urdf.xacro" />
+   <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro" />
+  <!-- <xacro:include filename="$(find pr2_description)/urdf/common.xacro" /> -->
+
+  <!-- camera -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+
+  <!-- table -->
+  <xacro:include filename="$(find ur5e_robotiq_gazebo)/urdf/table_denso.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:ur5e_robot prefix="" joint_limited="false"/>
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.6" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <xacro:robotiq_85_gripper prefix="" parent="wrist_3_link" >
+    <origin xyz="0 0.1 0" rpy="0 0 ${pi/2}"/>
+  </xacro:robotiq_85_gripper>
+
+  <!-- <xacro:kinect2_v0 name="" parent="world" >
+    <origin xyz="0.4 0.0 1.2" rpy="0.0 ${pi/2} 0.0" />
+  </xacro:kinect2_v0> -->
+
+  <xacro:arg name="use_nominal_extrinsics" default="True" />
+	<xacro:if value="${sim}">
+	  <xacro:sensor_d435 parent="world">
+	    <origin xyz="0.27 0.9 1.23" rpy="0 0 0"/>
+	  </xacro:sensor_d435>
+	</xacro:if>
+
+	<!-- include camera -->
+	<xacro:unless value="${sim}">
+	  <link name="camera_link"/>
+	  <joint name="camera_joint" type="fixed">
+		<parent link="world"/>
+		<child link="camera_link"/>
+		<origin xyz="0.27 0.9 1.5" rpy="${pi/4} ${pi/2} 0"/>
+	  </joint>
+	</xacro:unless>
+
+
+  	<!-- include platform -->
+	<xacro:table prefix="" parent="world">
+  	  <origin xyz="-0.50 -0.28 -0.1" rpy="0 0 0"/>
+	</xacro:table>
+  
+
+</robot>

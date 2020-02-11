@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="tag_02">
+    <pose>0 0 0 0 0 0</pose>
+		<static>true</static>
+    <link name="link">
+      <inertial>
+        <mass>0.005</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.13 0.13 0.001</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <slip1>0.0</slip1>
+              <slip2>0.0</slip2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="pattern">
+        <pose> 0 0 0 0 0 0 </pose>
+        <geometry>
+          <box>
+            <size>0.13 0.13 0.0001</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://materials/scripts</uri>
+            <uri>model://materials/textures</uri>
+            <name>tag/tag_02</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

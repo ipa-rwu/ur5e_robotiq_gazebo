@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.81.16 commit date:2019-11-20, commit time:14:27, hash:26bd5ebd42e3</authoring_tool>
+    </contributor>
+    <created>2020-01-21T10:24:05</created>
+    <modified>2020-01-21T10:24:05</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="skp_camera_Last_Saved_SketchUp_View-camera" name="skp_camera_Last_Saved_SketchUp_View.001">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">0</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">1</znear>
+            <zfar sid="zfar">1000</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_effects>
+    <effect id="Translucent_Glass_Blue_001-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.3921569 0.5843137 0.9294118 0.5019608</color>
+            </diffuse>
+            <transparent opaque="A_ONE">
+              <color sid="alpha">0 0 0 0.5019608</color>
+            </transparent>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="edge_color100149237128_001-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <transparent opaque="A_ONE">
+              <color sid="alpha">0 0 0 0.5019608</color>
+            </transparent>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="Translucent_Glass_Blue_001-material" name="Translucent_Glass_Blue.001">
+      <instance_effect url="#Translucent_Glass_Blue_001-effect"/>
+    </material>
+    <material id="edge_color100149237128_001-material" name="edge_color100149237128.001">
+      <instance_effect url="#edge_color100149237128_001-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID17_001-mesh" name="ID17.001">
+      <mesh>
+        <source id="ID17_001-mesh-positions">
+          <float_array id="ID17_001-mesh-positions-array" count="144">0.06670761 2.674988 0.07874011 0.06670761 0.07656282 3.543307 0.06670761 0.07656282 0.07874011 0.06670761 2.674988 3.543307 0.06670761 2.674988 3.543307 0.06670761 2.674988 0.07874011 0.06670761 0.07656282 3.543307 0.06670761 0.07656282 0.07874011 0.06670761 0.07656282 3.543307 0.06670761 2.674988 3.543307 0.06670761 0.07656282 0.07874011 0.06670761 2.674988 0.07874011 0.06670761 0.07656282 3.543307 3.452534 0.07656282 0.07874011 0.06670761 0.07656282 0.07874011 3.452534 0.07656282 3.543307 3.452534 0.07656282 3.543307 0.06670761 0.07656282 3.543307 3.452534 0.07656282 0.07874011 0.06670761 0.07656282 0.07874011 3.452534 0.07656282 3.543307 3.452534 0.07656282 0.07874011 3.452534 0.07656282 0.07874011 0.06670761 2.674988 0.07874011 0.06670761 0.07656282 0.07874011 3.452534 2.674988 0.07874011 3.452534 2.674988 0.07874011 3.452534 0.07656282 0.07874011 0.06670761 2.674988 0.07874011 0.06670761 0.07656282 0.07874011 3.452534 2.674988 0.07874011 3.452534 2.674988 3.543307 0.06670761 2.674988 0.07874011 3.452534 2.674988 0.07874011 0.06670761 2.674988 3.543307 0.06670761 2.674988 3.543307 3.452534 2.674988 3.543307 0.06670761 2.674988 0.07874011 3.452534 2.674988 0.07874011 3.452534 2.674988 3.543307 3.452534 2.674988 3.543307 3.452534 0.07656282 0.07874011 3.452534 0.07656282 3.543307 3.452534 2.674988 0.07874011 3.452534 2.674988 0.07874011 3.452534 2.674988 3.543307 3.452534 0.07656282 0.07874011 3.452534 0.07656282 3.543307</float_array>
+          <technique_common>
+            <accessor source="#ID17_001-mesh-positions-array" count="48" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID17_001-mesh-normals">
+          <float_array id="ID17_001-mesh-normals-array" count="18">1 0 0 -1 0 0 0 1 0 0 -1 0 0 0 1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#ID17_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID17_001-mesh-vertices">
+          <input semantic="POSITION" source="#ID17_001-mesh-positions"/>
+        </vertices>
+        <lines count="12">
+          <input semantic="VERTEX" source="#ID17_001-mesh-vertices" offset="0"/>
+          <p>9 8 10 8 11 10 11 9 8 20 21 20 21 10 30 11 30 21 39 9 30 39 20 39</p>
+        </lines>
+        <triangles material="Translucent_Glass_Blue_001-material" count="20">
+          <input semantic="VERTEX" source="#ID17_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID17_001-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 1 0 0 0 3 0 4 1 5 1 6 1 7 1 6 1 5 1 12 2 13 2 14 2 13 2 12 2 15 2 16 3 17 3 18 3 19 3 18 3 17 3 22 4 23 4 24 4 23 4 22 4 25 4 26 5 27 5 28 5 29 5 28 5 27 5 31 3 32 3 33 3 32 3 31 3 34 3 35 2 36 2 37 2 38 2 37 2 36 2 40 1 41 1 42 1 41 1 40 1 43 1 44 0 45 0 46 0 47 0 46 0 45 0</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID5_001-mesh" name="ID5.001">
+      <mesh>
+        <source id="ID5_001-mesh-positions">
+          <float_array id="ID5_001-mesh-positions-array" count="204">3.543307 2.755906 0 0 0 0 0 2.755906 0 3.543307 0 0 3.543307 0 0 3.543307 2.755906 0 0 0 0 0 2.755906 0 0 2.755906 0 3.543307 2.755906 0 3.543307 0 0 0 0 0 0 2.755906 3.543307 3.543307 2.755906 0 0 2.755906 0 3.543307 2.755906 3.543307 3.543307 2.755906 3.543307 0 2.755906 3.543307 3.543307 2.755906 0 0 2.755906 0 0 2.755906 3.543307 3.543307 2.755906 3.543307 3.543307 2.755906 0 3.543307 0 3.543307 3.543307 0 0 3.543307 2.755906 3.543307 3.543307 2.755906 3.543307 3.543307 2.755906 0 3.543307 0 3.543307 3.543307 0 0 3.543307 0 3.543307 3.543307 0 3.543307 0 0 0 3.543307 0 0 0 0 3.543307 0 0 3.543307 3.543307 0 3.543307 0 0 0 3.543307 0 0 0 0 3.543307 0 2.755906 3.543307 0 0 0 0 0 3.543307 0 2.755906 0 0 2.755906 0 0 2.755906 3.543307 0 0 0 0 0 3.543307 0 0 3.543307 0.06670761 0.07656282 3.543307 0 2.755906 3.543307 3.543307 0 3.543307 3.452534 0.07656282 3.543307 3.452534 2.674988 3.543307 0.06670761 2.674988 3.543307 3.543307 2.755906 3.543307 3.543307 0 3.543307 3.452534 2.674988 3.543307 3.543307 2.755906 3.543307 0.06670761 2.674988 3.543307 0.06670761 0.07656282 3.543307 0 2.755906 3.543307 3.452534 0.07656282 3.543307 0 0 3.543307 0.06670761 0.07656282 3.543307 0.06670761 2.674988 3.543307 3.452534 2.674988 3.543307 3.452534 0.07656282 3.543307</float_array>
+          <technique_common>
+            <accessor source="#ID5_001-mesh-positions-array" count="68" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID5_001-mesh-normals">
+          <float_array id="ID5_001-mesh-normals-array" count="30">0 0 -1 0 0 1 0 1 0 0 -1 0 1 0 0 -1 0 0 -1.42958e-6 0 -1 2.06322e-6 0 -1 2.52704e-6 0 -1 -3.2422e-6 0 -1</float_array>
+          <technique_common>
+            <accessor source="#ID5_001-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID5_001-mesh-vertices">
+          <input semantic="POSITION" source="#ID5_001-mesh-positions"/>
+        </vertices>
+        <lines count="16">
+          <input semantic="VERTEX" source="#ID5_001-mesh-vertices" offset="0"/>
+          <p>9 8 9 10 10 11 8 11 20 8 21 20 21 9 21 30 30 10 30 39 39 11 20 39 65 64 66 65 67 66 64 67</p>
+        </lines>
+        <triangles material="Translucent_Glass_Blue_001-material" count="36">
+          <input semantic="VERTEX" source="#ID5_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID5_001-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 1 0 0 0 3 0 4 1 5 1 6 1 7 1 6 1 5 1 12 2 13 2 14 2 13 2 12 2 15 2 16 3 17 3 18 3 19 3 18 3 17 3 22 4 23 4 24 4 23 4 22 4 25 4 26 5 27 5 28 5 29 5 28 5 27 5 31 3 32 3 33 3 32 3 31 3 34 3 35 2 36 2 37 2 38 2 37 2 36 2 40 5 41 5 42 5 41 5 40 5 43 5 44 4 45 4 46 4 47 4 46 4 45 4 48 1 49 1 50 1 49 1 48 1 51 1 49 1 51 1 52 1 52 1 51 1 53 1 50 1 54 1 55 1 54 1 50 1 49 1 55 1 54 1 53 1 55 1 53 1 51 1 56 6 57 6 58 6 57 0 59 0 58 0 60 7 61 7 59 7 58 0 59 0 61 0 57 8 56 8 62 8 62 0 56 0 60 0 56 0 63 0 60 0 61 9 60 9 63 9</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="SketchUp" name="SketchUp" type="NODE">
+        <matrix sid="transform">0.0254 0 0 0 0 0.0254 0 0 0 0 0.0254 0 0 0 0 1</matrix>
+        <node id="skp_camera_Last_Saved_SketchUp_View" name="skp_camera_Last_Saved_SketchUp_View" type="NODE">
+          <matrix sid="transform">0.9266483 -0.1032223 0.3614807 8.769601 0.3759297 0.254438 -0.8910322 -9.247123 -2.82177e-8 0.9615647 0.2745788 4.56371 0 0 0 1</matrix>
+          <instance_camera url="#skp_camera_Last_Saved_SketchUp_View-camera"/>
+        </node>
+        <node id="box" name="box" type="NODE">
+          <matrix sid="transform">16.33 0 0 1.842661 0 13.72 0 1.992078 0 0 12.78 0 0 0 0 1</matrix>
+          <instance_geometry url="#ID5_001-mesh" name="box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Translucent_Glass_Blue_001-material" target="#Translucent_Glass_Blue_001-material"/>
+                <instance_material symbol="edge_color100149237128_001-material" target="#edge_color100149237128_001-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="box_001" name="box.001" type="NODE">
+          <matrix sid="transform">1 0 0 1.842661 0 1 0 1.992078 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#ID17_001-mesh" name="box.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Translucent_Glass_Blue_001-material" target="#Translucent_Glass_Blue_001-material"/>
+                <instance_material symbol="edge_color100149237128_001-material" target="#edge_color100149237128_001-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
